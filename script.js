@@ -1,54 +1,94 @@
 // Variables for num1, operator, num2 to display on calc
 let num1 = 0;
 let num2 = 0;
-let operator = 0;
+let operator = "";
 let displayValue = "";
 
 // Functions for add, subtract, divide, multiply
-function addNumbers (num1, num2) {
-    return num1 + num2;
+function addNumbers() {
+    let answer = Number(num1) + Number(num2);
+    let displayDiv = document.getElementById('display');
+    displayDiv.innerHTML = answer;
+    num1 = answer;
+    num2 = 0;
+    displayValue = "";
+    return answer;
 }
 
-function subtractNumbers (num1, num2) {
-    return num1 - num2;
+function subtractNumbers() {
+    let answer = Number(num1) - Number(num2);
+    let displayDiv = document.getElementById('display');
+    displayDiv.innerHTML = answer;
+    num1 = answer;
+    num2 = 0;
+    displayValue = "";
+    return answer;
 }
 
-function multiplyNumbers (num1, num2) {
-    return num1 * num2;
+function multiplyNumbers() {
+    let answer = Number(num1) * Number(num2);
+    let displayDiv = document.getElementById('display');
+    displayDiv.innerHTML = answer;
+    num1 = answer;
+    num2 = 0;
+    displayValue = "";
+    return answer;
 }
 
-function divideNumbers (num1, num2) {
-    return num1 / num2;
+function divideNumbers() {
+    let answer = Number(num1) / Number(num2);
+    let displayDiv = document.getElementById('display');
+    displayDiv.innerHTML = answer;
+    num1 = answer;
+    num2 = 0;
+    displayValue = "";
+    return answer;
 }
 
 
 // Function called operate that takes an operator, the two numbers and calls the relevant function
-function operate (operator, num1, num2) {
+function operate(operator) {
     switch (operator) {
         case "+":
-            return addNumbers(num1, num2);
+            return addNumbers();
             break;
         case "-":
-            return subtractNumbers(num1, num2);
+            return subtractNumbers();
             break;
         case "*":
-            return multiplyNumbers(num1, num2);
+            return multiplyNumbers();
             break;
         case "/":
-            return divideNumbers(num1, num2);
+            return divideNumbers();
             break;
+    }
+    
+}
+
+// Functions that populate display with numbers entered. Store “display value” in a variable.
+function numberEntered(button) {
+    let buttonValue = button.innerHTML;
+    displayValue += buttonValue;
+
+    let displayDiv = document.getElementById('display');
+    displayDiv.innerHTML = displayValue;
+}
+
+
+function operatorButton(buttonOperator) {
+    
+    if(num1 === 0) {
+        operator = buttonOperator;
+        num1 = displayValue;
+        displayValue = "";
+    } else {
+        num2 = displayValue;
+        operate(operator);
+        operator = buttonOperator;
     }
 }
 
 
-// Functions that populate display with numbers entered. Store “display value” in a variable.
-function numberEntered (button) {
-    let buttonValue = button.innerHTML;
-    displayValue += buttonValue;
-    
-    let displayDiv = document.getElementById('display');
-    displayDiv.innerHTML = displayValue;
-}
 
 // Once operate has been called, update the display with the solution.
 

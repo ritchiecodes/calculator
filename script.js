@@ -9,9 +9,9 @@ function addNumbers() {
     let answer = Number(num1) + Number(num2);
     let displayDiv = document.getElementById('display');
     displayDiv.innerHTML = answer;
-    num1 = answer;
+    num1 = 0;
     num2 = 0;
-    displayValue = "";
+    displayValue = answer;
     return answer;
 }
 
@@ -19,9 +19,9 @@ function subtractNumbers() {
     let answer = Number(num1) - Number(num2);
     let displayDiv = document.getElementById('display');
     displayDiv.innerHTML = answer;
-    num1 = answer;
+    num1 = 0;
     num2 = 0;
-    displayValue = "";
+    displayValue = answer;
     return answer;
 }
 
@@ -29,9 +29,9 @@ function multiplyNumbers() {
     let answer = Number(num1) * Number(num2);
     let displayDiv = document.getElementById('display');
     displayDiv.innerHTML = answer;
-    num1 = answer;
+    num1 = 0;
     num2 = 0;
-    displayValue = "";
+    displayValue = answer;
     return answer;
 }
 
@@ -39,9 +39,9 @@ function divideNumbers() {
     let answer = Number(num1) / Number(num2);
     let displayDiv = document.getElementById('display');
     displayDiv.innerHTML = answer;
-    num1 = answer;
+    num1 = 0;
     num2 = 0;
-    displayValue = "";
+    displayValue = answer;
     return answer;
 }
 

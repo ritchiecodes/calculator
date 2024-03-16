@@ -42,8 +42,6 @@ function operate (operator, num1, num2) {
 console.log(operate("-",5,3))
 
 
-
-
 // Create HTML calc with each digit, the operators and an equals. Also create a display for the calc (fill with dummy numbers), Also add a clear button.
 // Functions that populate display with numbers entered. Store “display value” in a variable.
 // Once operate has been called, update the display with the solution.
@@ -56,5 +54,5 @@ console.log(operate("-",5,3))
 - clear should wipe all data and start fresh
 - display error message if user tries to divide by 0 and stop app from crashing */
 
-// Extra credit - Make it look nice with css, add a backspace and add keyboard support.
+// Make it look nice with css, add a backspace to gui and add keyboard support.
  

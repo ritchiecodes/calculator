@@ -64,7 +64,7 @@ body {
     background-color: #ccc;
 }
 
-.display {
+#display {
     text-align: right;
     width: 91%;
     height: 60px;

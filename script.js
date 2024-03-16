@@ -1,8 +1,8 @@
 // Variables for num1, operator, num2 to display on calc
-num1 = 0;
-num2 = 0;
-operator = 0;
-displayValue = 0;
+let num1 = 0;
+let num2 = 0;
+let operator = 0;
+let displayValue = "";
 
 // Functions for add, subtract, divide, multiply
 function addNumbers (num1, num2) {
@@ -40,11 +40,15 @@ function operate (operator, num1, num2) {
     }
 }
 
-console.log(operate("-",5,3))
-
 
 // Functions that populate display with numbers entered. Store “display value” in a variable.
-
+function numberEntered (button) {
+    let buttonValue = button.innerHTML;
+    displayValue += buttonValue;
+    
+    let displayDiv = document.getElementById('display');
+    displayDiv.innerHTML = displayValue;
+}
 
 // Once operate has been called, update the display with the solution.
 

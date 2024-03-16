@@ -11,7 +11,7 @@
 <div class="container">
     <div class="calculator">
         <div class="content">
-            <div class="display">52</div>
+            <div id="display"></div>
             <div class="rows">
                 <div type="button" class="buttons add">+</div>
                 <div type="button" class="buttons subtract">−</div>
@@ -19,26 +19,26 @@
                 <div type="button" class="buttons divide">÷</div>
             </div> 
             <div class="rows">
-                <div type="button" class="buttons 7">7</div>
-                <div type="button" class="buttons 8">8</div>
-                <div type="button" class="buttons 9">9</div>
+                <div type="button" class="buttons 7" onclick="numberEntered(this)">7</div>
+                <div type="button" class="buttons 8" onclick="numberEntered(this)">8</div>
+                <div type="button" class="buttons 9" onclick="numberEntered(this)">9</div>
                 <div type="button" class="buttons backspace">⌫</div>
             </div>
             <div class="rows">
-                <div type="button" class="buttons 4">4</div>
-                <div type="button" class="buttons 5">5</div>
-                <div type="button" class="buttons 6">6</div>
+                <div type="button" class="buttons 4" onclick="numberEntered(this)">4</div>
+                <div type="button" class="buttons 5" onclick="numberEntered(this)">5</div>
+                <div type="button" class="buttons 6" onclick="numberEntered(this)">6</div>
                 <div type="button" class="buttons clear">C</div>
             </div>
             <div class="rows">
-                <div type="button" class="buttons 1">1</div>
-                <div type="button" class="buttons 2">2</div>
-                <div type="button" class="buttons 3">3</div>
+                <div type="button" class="buttons 1" onclick="numberEntered(this)">1</div>
+                <div type="button" class="buttons 2" onclick="numberEntered(this)">2</div>
+                <div type="button" class="buttons 3" onclick="numberEntered(this)">3</div>
                 <div type="button" class="buttons equals">=</div>
             </div>
         </div>
     </div>
 </div>
-
 </body>
+<script src="script.js"></script>
 </html>

@@ -74,7 +74,7 @@ function numberEntered(button) {
     displayDiv.innerHTML = displayValue;
 }
 
-
+// Function when operator button is clicked.
 function operatorButton(buttonOperator) {
     if(num1 === 0) {
         operator = buttonOperator;
@@ -87,6 +87,7 @@ function operatorButton(buttonOperator) {
     }
 }
 
+// Function when equal button is clicked.
 function equalButton() {
     if(num1 === 0) {
         num1 = displayValue;
@@ -97,8 +98,7 @@ function equalButton() {
     }
 }
 
-
-// Once operate has been called, update the display with the solution.
+// Need to add 0 button, need to program clear and backspace buttons.
 
 /* Bugs to watch out for
 - 12 + 7 - 5 * 3 should equal 42, each two numbers should be calculated before the next one.

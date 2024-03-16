@@ -76,7 +76,6 @@ function numberEntered(button) {
 
 
 function operatorButton(buttonOperator) {
-    
     if(num1 === 0) {
         operator = buttonOperator;
         num1 = displayValue;
@@ -88,6 +87,15 @@ function operatorButton(buttonOperator) {
     }
 }
 
+function equalButton() {
+    if(num1 === 0) {
+        num1 = displayValue;
+        displayValue = "";
+    } else {
+        num2 = displayValue;
+        operate(operator);
+    }
+}
 
 
 // Once operate has been called, update the display with the solution.

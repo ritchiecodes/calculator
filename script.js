@@ -2,6 +2,7 @@
 num1 = 0;
 num2 = 0;
 operator = 0;
+displayValue = 0;
 
 // Functions for add, subtract, divide, multiply
 function addNumbers (num1, num2) {
@@ -43,6 +44,7 @@ console.log(operate("-",5,3))
 
 
 // Functions that populate display with numbers entered. Store “display value” in a variable.
+
 
 // Once operate has been called, update the display with the solution.
 

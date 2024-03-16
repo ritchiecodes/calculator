@@ -22,10 +22,7 @@ body {
     padding: 20px;
 }
 
-.row1,
-.row2,
-.row3,
-.row4 {
+.rows {
     display: flex;
     justify-content: space-between;
 }

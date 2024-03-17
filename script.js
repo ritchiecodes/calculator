@@ -7,35 +7,59 @@ let displayValue = "";
 // Functions for add, subtract, divide, multiply
 function addNumbers() {
     let answer = Number(num1) + Number(num2);
-    let displayDiv = document.getElementById('display');
-    answer = answer.toFixed(2);
-    displayDiv.innerHTML = answer;
-    num1 = 0;
-    num2 = 0;
-    displayValue = answer;
-    return answer;
+    let checkDecimal = (answer - Math.floor(answer)) !== 0;
+    if (checkDecimal) {
+        answer = answer.toFixed(2);
+    }
+    if (answer > 999999.99) {
+        let displayDiv = document.getElementById('display');
+        displayDiv.innerHTML = "ERROR";
+    } else {
+        let displayDiv = document.getElementById('display');
+        displayDiv.innerHTML = answer;
+        num1 = 0;
+        num2 = 0;
+        displayValue = answer;
+        return answer;
+    }
 }
 
 function subtractNumbers() {
     let answer = Number(num1) - Number(num2);
-    let displayDiv = document.getElementById('display');
-    answer = answer.toFixed(2);
-    displayDiv.innerHTML = answer;
-    num1 = 0;
-    num2 = 0;
-    displayValue = answer;
-    return answer;
+    let checkDecimal = (answer - Math.floor(answer)) !== 0;
+    if (checkDecimal) {
+        answer = answer.toFixed(2);
+    }
+    if (answer > 999999.99) {
+        let displayDiv = document.getElementById('display');
+        displayDiv.innerHTML = "ERROR";
+    } else {
+        let displayDiv = document.getElementById('display');
+        displayDiv.innerHTML = answer;
+        num1 = 0;
+        num2 = 0;
+        displayValue = answer;
+        return answer;
+    }
 }
 
 function multiplyNumbers() {
     let answer = Number(num1) * Number(num2);
-    let displayDiv = document.getElementById('display');
-    answer = answer.toFixed(2);
-    displayDiv.innerHTML = answer;
-    num1 = 0;
-    num2 = 0;
-    displayValue = answer;
-    return answer;
+    let checkDecimal = (answer - Math.floor(answer)) !== 0;
+    if (checkDecimal) {
+        answer = answer.toFixed(2);
+    }
+    if (answer > 999999.99) {
+        let displayDiv = document.getElementById('display');
+        displayDiv.innerHTML = "ERROR";
+    } else {
+        let displayDiv = document.getElementById('display');
+        displayDiv.innerHTML = answer;
+        num1 = 0;
+        num2 = 0;
+        displayValue = answer;
+        return answer;
+    }
 }
 
 function divideNumbers() {
@@ -44,13 +68,21 @@ function divideNumbers() {
         displayDiv.innerHTML = "ERROR";
     } else {
         let answer = Number(num1) / Number(num2);
-        let displayDiv = document.getElementById('display');
-        answer = answer.toFixed(2);
-        displayDiv.innerHTML = answer;
-        num1 = 0;
-        num2 = 0;
-        displayValue = answer;
-        return answer;
+        let checkDecimal = (answer - Math.floor(answer)) !== 0;
+        if (checkDecimal) {
+            answer = answer.toFixed(2);
+        }
+        if (answer > 999999.99) {
+            let displayDiv = document.getElementById('display');
+            displayDiv.innerHTML = "ERROR";
+        } else {
+            let displayDiv = document.getElementById('display');
+            displayDiv.innerHTML = answer;
+            num1 = 0;
+            num2 = 0;
+            displayValue = answer;
+            return answer;
+        }
     }
 }
 
@@ -126,6 +158,5 @@ function backspaceButton() {
 }
 
 
-// Need to program backspace buttons.
 // Make it look nice with css, add a backspace to gui and add keyboard support.
  

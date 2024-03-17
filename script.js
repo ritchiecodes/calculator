@@ -8,6 +8,7 @@ let displayValue = "";
 function addNumbers() {
     let answer = Number(num1) + Number(num2);
     let displayDiv = document.getElementById('display');
+    answer = answer.toFixed(2);
     displayDiv.innerHTML = answer;
     num1 = 0;
     num2 = 0;
@@ -18,6 +19,7 @@ function addNumbers() {
 function subtractNumbers() {
     let answer = Number(num1) - Number(num2);
     let displayDiv = document.getElementById('display');
+    answer = answer.toFixed(2);
     displayDiv.innerHTML = answer;
     num1 = 0;
     num2 = 0;
@@ -28,6 +30,7 @@ function subtractNumbers() {
 function multiplyNumbers() {
     let answer = Number(num1) * Number(num2);
     let displayDiv = document.getElementById('display');
+    answer = answer.toFixed(2);
     displayDiv.innerHTML = answer;
     num1 = 0;
     num2 = 0;
@@ -36,13 +39,19 @@ function multiplyNumbers() {
 }
 
 function divideNumbers() {
-    let answer = Number(num1) / Number(num2);
-    let displayDiv = document.getElementById('display');
-    displayDiv.innerHTML = answer;
-    num1 = 0;
-    num2 = 0;
-    displayValue = answer;
-    return answer;
+    if (num2 === "0") {
+        let displayDiv = document.getElementById('display');
+        displayDiv.innerHTML = "ERROR";
+    } else {
+        let answer = Number(num1) / Number(num2);
+        let displayDiv = document.getElementById('display');
+        answer = answer.toFixed(2);
+        displayDiv.innerHTML = answer;
+        num1 = 0;
+        num2 = 0;
+        displayValue = answer;
+        return answer;
+    }
 }
 
 
@@ -69,6 +78,7 @@ function operate(operator) {
 function numberEntered(button) {
     let buttonValue = button.innerHTML;
     displayValue += buttonValue;
+    displayValue = displayValue.substring(0, 9)
 
     let displayDiv = document.getElementById('display');
     displayDiv.innerHTML = displayValue;
@@ -89,26 +99,29 @@ function operatorButton(buttonOperator) {
     }
 }
 
-// Function when equal button is clicked.
+
 function equalButton() {
-    if(num1 === 0) {
-        num1 = displayValue;
-        displayValue = "";
+    if (num1 === 0 && num2 === 0) {
+        let displayDiv = document.getElementById('display');
+        displayDiv.innerHTML = "ERROR";
     } else {
         num2 = displayValue;
         operate(operator);
     }
 }
 
-// Need to add 0 button, need to program clear and backspace buttons.
 
-/* Bugs to watch out for
-- 12 + 7 - 5 * 3 should equal 42, each two numbers should be calculated before the next one.
-- You press 12 + 7 -, this should calculate 12 + 7 and then display 19 and then take 19 as the first number and - as the operator waiting for a 2nd number.
-- round long decimals so they fit on display
-- equals before numbers and operators will cause error
-- clear should wipe all data and start fresh
-- display error message if user tries to divide by 0 and stop app from crashing */
+function clearButton() {
+    let displayDiv = document.getElementById('display');
+    displayDiv.innerHTML = "";
+    num1 = 0;
+    num2 = 0;
+    operator = "";
+    displayValue = "";
+}
 
+
+
+// Need to program backspace buttons.
 // Make it look nice with css, add a backspace to gui and add keyboard support.
  

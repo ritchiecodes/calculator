@@ -39,7 +39,7 @@ body {
     margin: 5px;
 }
 
-.buttons.zero {
+.buttons#zero {
     width: 143px;
 }
 

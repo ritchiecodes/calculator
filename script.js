@@ -4,7 +4,6 @@ let num2 = 0;
 let operator = "";
 let displayValue = "";
 
-// Functions for add, subtract, divide, multiply
 function addNumbers() {
     let answer = Number(num1) + Number(num2);
     let checkDecimal = (answer - Math.floor(answer)) !== 0;
@@ -86,8 +85,6 @@ function divideNumbers() {
     }
 }
 
-
-// Function called operate that takes an operator, the two numbers and calls the relevant function
 function operate(operator) {
     switch (operator) {
         case "+":
@@ -106,7 +103,6 @@ function operate(operator) {
     
 }
 
-// Functions that populate display with numbers entered. Store “display value” in a variable.
 function numberEntered(button) {
     let buttonValue = button.innerHTML;
     displayValue += buttonValue;
@@ -116,7 +112,6 @@ function numberEntered(button) {
     displayDiv.innerHTML = displayValue;
 }
 
-// Function when operator button is clicked.
 function operatorButton(buttonOperator) {
     if(num1 === 0) {
         operator = buttonOperator;
@@ -130,7 +125,6 @@ function operatorButton(buttonOperator) {
         displayValue = "";
     }
 }
-
 
 function equalButton() {
     if (num1 === 0 && num2 === 0) {
@@ -157,6 +151,31 @@ function backspaceButton() {
     displayDiv.innerHTML = displayValue;
 }
 
+// Keyboard Support
+const numberKeys = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+const numberIds = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"];
+document.addEventListener('keydown', (e) => {
+    if (e.key === numberKeys[e.key]) {
+        document.getElementById(numberIds[e.key]).click();
+    } else if (e.key === "+") {
+        document.getElementById("add").click();
+    } else if (e.key === "-") {
+        document.getElementById("minus").click();
+    } else if (e.key === "*") {
+        document.getElementById("multiply").click();
+    } else if (e.key === "/") {
+        document.getElementById("divide").click();
+    } else if (e.key === "Enter" || e.key === "=") {
+        document.getElementById("equals").click();
+    } else if (e.key === "Backspace" || e.key === "Delete") {
+        document.getElementById("backspace").click();
+    } else if (e.key === ".") {
+        document.getElementById("decimal").click();
+    } else if (e.key === "c" || e.key === "C") {
+        document.getElementById("clear").click();
+    }
+})
 
-// Make it look nice with css, add a backspace to gui and add keyboard support.
+
+// Make it look nice with css.
  

@@ -110,7 +110,6 @@ function equalButton() {
     }
 }
 
-
 function clearButton() {
     let displayDiv = document.getElementById('display');
     displayDiv.innerHTML = "";
@@ -120,6 +119,11 @@ function clearButton() {
     displayValue = "";
 }
 
+function backspaceButton() {
+    displayValue = displayValue.slice(0, -1);
+    let displayDiv = document.getElementById('display');
+    displayDiv.innerHTML = displayValue;
+}
 
 
 // Need to program backspace buttons.

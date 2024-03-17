@@ -84,6 +84,8 @@ function operatorButton(buttonOperator) {
         num2 = displayValue;
         operate(operator);
         operator = buttonOperator;
+        num1 = displayValue;
+        displayValue = "";
     }
 }
 

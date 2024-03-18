@@ -1,3 +1,39 @@
+@media (prefers-color-scheme: dark) {
+    .content {
+        background-color: #444;
+        color: #FFF;
+    }
+
+    .container {
+        background-color: #555;
+    }
+
+    .calculator .buttons:hover {
+        background-color: #555555;
+    }
+
+    .calculator #add,
+    .calculator #subtract,
+    .calculator #multiply,
+    .calculator #divide,
+    .calculator #backspace,
+    .calculator #clear,
+    .calculator #equals  {
+        background-color: #353535;
+        color: #fff;
+    }
+
+    .calculator #add:hover,
+    .calculator #subtract:hover,
+    .calculator #multiply:hover,
+    .calculator #divide:hover,
+    .calculator #backspace:hover,
+    .calculator #clear:hover,
+    .calculator #equals:hover {
+    background-color: #444;
+}
+  }
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;

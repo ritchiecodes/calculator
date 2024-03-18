@@ -116,7 +116,6 @@ function numberEntered(button) {
 
     let displayDiv = document.getElementById('display');
     displayDiv.innerHTML = displayValue;
-    alert(button)
 }
 
 function operatorButton(buttonOperator) {
@@ -182,7 +181,4 @@ document.addEventListener('keydown', (e) => {
         document.getElementById("clear").click();
     }
 })
-
-
-// Make it look nice with css.
  

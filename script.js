@@ -104,12 +104,19 @@ function operate(operator) {
 }
 
 function numberEntered(button) {
+    if (num1 === 0 && num2 === 0 && displayValue !== "" && operator != "") {
+    clearButton();
+    }
+    if (displayValue.includes(".") && button.innerHTML === ".") {
+        return;
+    }
     let buttonValue = button.innerHTML;
     displayValue += buttonValue;
     displayValue = displayValue.substring(0, 9)
 
     let displayDiv = document.getElementById('display');
     displayDiv.innerHTML = displayValue;
+    alert(button)
 }
 
 function operatorButton(buttonOperator) {

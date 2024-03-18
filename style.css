@@ -47,24 +47,24 @@ body {
     background-color: #f0f0f0;
 }
 
-.add,
-.subtract,
-.multiply,
-.divide,
-.backspace,
-.clear,
-.equals {
+#add,
+#subtract,
+#multiply,
+#divide,
+#backspace,
+#clear,
+#equals {
     background-color: #f0f0f0;
     color: #333;
 }
 
-.add:hover,
-.subtract:hover,
-.multiply:hover,
-.divide:hover,
-.backspace:hover,
-.clear:hover,
-.equals:hover {
+#add:hover,
+#subtract:hover,
+#multiply:hover,
+#divide:hover,
+#backspace:hover,
+#clear:hover,
+#equals:hover {
     background-color: #ccc;
 }
 

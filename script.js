@@ -152,6 +152,9 @@ function clearButton() {
 }
 
 function backspaceButton() {
+    if (num1 === 0 && num2 === 0 && displayValue !== "" && operator != "") {
+        return;
+        }
     displayValue = displayValue.slice(0, -1);
     let displayDiv = document.getElementById('display');
     displayDiv.innerHTML = displayValue;

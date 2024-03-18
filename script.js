@@ -169,7 +169,7 @@ document.addEventListener('keydown', (e) => {
     } else if (e.key === "+") {
         document.getElementById("add").click();
     } else if (e.key === "-") {
-        document.getElementById("minus").click();
+        document.getElementById("subtract").click();
     } else if (e.key === "*") {
         document.getElementById("multiply").click();
     } else if (e.key === "/") {

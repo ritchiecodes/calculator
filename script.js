@@ -123,7 +123,9 @@ function operatorButton(buttonOperator) {
         operator = buttonOperator;
         num1 = displayValue;
         displayValue = "";
-    } else if (num2 !== 0) {
+    } else if (operator != buttonOperator) {
+		operator = buttonOperator;
+	} else if (num2 !== 0) {
         num2 = displayValue;
         operate(operator);
         operator = buttonOperator;
